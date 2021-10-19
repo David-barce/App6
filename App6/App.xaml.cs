@@ -6,7 +6,7 @@ namespace App6
 {
     public partial class App : Application
     {
-        public static INavigation Navigation { get; private set; }
+        public static INavigation Navigation { get; internal set; }
 
         public App()
         {

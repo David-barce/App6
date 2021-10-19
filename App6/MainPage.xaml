@@ -11,7 +11,7 @@
         <Label Text="Bienvenido ingresa tus datos" FontSize="16" Padding="30,0,30,0"/>
 
         <Label Text="Usuario:"/>
-        <Entry Text="{Binding UserName}"/>
+        <Entry Text="{Binding Username}"/>
         <Label Text=""/>
         <Label Text="Contraseña:"/>
         <Entry Text="{Binding Password}" IsPassword="True"/>

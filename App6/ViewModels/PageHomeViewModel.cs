@@ -8,7 +8,7 @@ namespace App6.ViewModels
     public class PageHomeViewModel : BaseViewModel
     {
         Command _goToRoot;
-        public PageHomeViewModel(INavigation navigation) : base(navigation)
+        public PageHomeViewModel(INavigation navigation = null) : base(navigation)
         {
 
         }

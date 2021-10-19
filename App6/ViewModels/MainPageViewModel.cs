@@ -12,11 +12,11 @@ namespace App6.ViewModels
         Command _goToViewHomeCommand;
         string username;
         string password;
-        private bool isError;
+        bool isError;
 
         public MainPageViewModel(INavigation navigation) : base(navigation)
         {
-
+            Navigation = navigation ?? App.Navigation;
         }
 
         public string Username
@@ -41,7 +41,7 @@ namespace App6.ViewModels
             }
         }
 
-        public Command GoToViewHomeCommand
+        public Command GoToViewHomeCommand 
         {
             get => _goToViewHomeCommand ?? (_goToViewHomeCommand = new Command(GoToViewHomeAction));
         }
@@ -63,6 +63,8 @@ namespace App6.ViewModels
             IsError = !(Username == "David" && Password == "123456");
             if (!IsError)
             {
+                Username = String.Empty;
+                Password = String.Empty;
                 Navigation.PushAsync(new PageHome());
             }
 
